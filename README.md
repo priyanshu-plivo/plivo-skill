@@ -24,7 +24,7 @@ export PLIVO_AUTH_ID=MAxxxxxxxxxxxxxxxxxx
 export PLIVO_AUTH_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-Get these from https://console.plivo.com/dashboard/.
+Get these from https://cx.plivo.com/home.
 
 ## Layout
 

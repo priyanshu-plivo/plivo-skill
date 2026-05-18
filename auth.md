@@ -9,7 +9,7 @@ PLIVO_AUTH_ID=MAxxxxxxxxxxxxxxxxxx
 PLIVO_AUTH_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-Get from https://console.plivo.com/dashboard/.
+Get from https://cx.plivo.com/home.
 
 ## Base URL
 

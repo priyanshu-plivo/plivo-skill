@@ -10,12 +10,19 @@ No code, no MCP server, no separate process. Just markdown.
 
 ## Install
 
+Recommended (via skills.sh CLI):
 ```bash
-# global (all projects)
-cp -r plivo-skill ~/.claude/skills/plivo
+npx skills add priyanshu-plivo/plivo-skill
+```
 
-# project-local
-cp -r plivo-skill .claude/skills/plivo
+Manual install (global, all projects):
+```bash
+git clone https://github.com/priyanshu-plivo/plivo-skill ~/.claude/skills/plivo
+```
+
+Project-local:
+```bash
+git clone https://github.com/priyanshu-plivo/plivo-skill .claude/skills/plivo
 ```
 
 Set env vars in your shell:
@@ -62,3 +69,11 @@ Manual / console-only operations (account recharge, number porting, KYC, WhatsAp
 ## CLI follow-up
 
 This skill is markdown-only — it cannot enforce safety (just instructs Claude to ask). For real enforcement of spend caps, confirmation gates, and dry-run mode, build a thin CLI that wraps the same operations and have this skill call the CLI for any mutation. The skill remains the agent-facing manual.
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md). Issues and PRs welcome.
+
+## License
+
+MIT — see [LICENSE](./LICENSE).

@@ -10,6 +10,7 @@ Read-only GETs. Free. No state change.
 - Search available phone numbers
 - Get account info, balance, subaccounts, applications
 - Read compliance status, brand/campaign status
+- List/get agent flows, their runs and node types
 
 Just do it.
 
@@ -21,6 +22,7 @@ Single-target mutations with small per-call cost.
 - Start 1 Verify OTP session
 - Make 1 outbound call
 - Create 1 conference
+- Create 1 agent flow, or edit a `DRAFT` one (no traffic until published)
 
 Pattern:
 > "I'll send an SMS to +1234567890 with body '<text>'. Estimated cost ~$X. Proceed?"
@@ -34,7 +36,8 @@ Spend, destructive, or fan-out actions.
 - Bulk SMS (multiple destinations or count > 10)
 - Buy a phone number (monthly recurring cost)
 - Release a phone number (irreversible, may not be re-rentable)
-- Delete a subaccount, application, endpoint, brand, campaign
+- Delete a subaccount, application, endpoint, brand, campaign, agent flow
+- Publish, pause or resume an agent flow, or edit a live one (changes real traffic at once)
 - Register a 10DLC brand or campaign (one-time non-refundable fee)
 - Submit toll-free verification
 - Create a Powerpack number pool

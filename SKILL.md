@@ -1,6 +1,6 @@
 ---
 name: plivo
-description: Use Plivo's REST API for SMS/MMS/WhatsApp messaging, voice calls, OTP verification, phone numbers, conferences, recordings, SIP trunks, subaccounts, and AI voice agents (audio streaming over WebSocket). Trigger when the user mentions Plivo, or asks to send a message, place a call, verify a phone via OTP, build/connect a voice agent, search/buy/release a phone number, manage WhatsApp templates, or check Plivo account state.
+description: Use Plivo's REST API for SMS/MMS/WhatsApp messaging, voice calls, OTP verification, phone numbers, conferences, recordings, SIP trunks, subaccounts, no-code agent flows (AgentFlow), and AI voice agents (audio streaming over WebSocket). Trigger when the user mentions Plivo, or asks to send a message, place a call, verify a phone via OTP, build/connect a voice agent, create/publish an agent flow, search/buy/release a phone number, manage WhatsApp templates, or check Plivo account state.
 ---
 
 # Plivo Skill
@@ -26,6 +26,7 @@ Voice: `api/calls.md`, `api/conferences.md`, `api/recordings.md`, `api/endpoints
 Verify: `api/verify.md`
 Numbers: `api/numbers.md`, `api/compliance.md`
 Account: `api/subaccount.md`, `api/application.md`, `api/account.md`, `api/sip-auth.md`, `api/pricing.md`
+Agents: `api/agentflow.md`
 Other: `api/sip-trunking.md`, `api/number-masking.md`
 
 ## XML reference (voice flow control)
@@ -60,6 +61,7 @@ When Plivo POSTs events to your URLs (form-encoded, NOT JSON):
 - **Path naming quirks**: `/TollfreeVerification/` (lowercase `f`!), `/SipAuth/IpAccessControlList/` (not `/AuthIp/`), `/PhoneNumber/Compliance/` (not `/Compliance/Application/`).
 - **Application's `log_incoming_message`** is singular (not plural).
 - **ACL ID field** is `ip_acl_uuid` (not `uuid` or `ip_access_control_list_uuid`).
+- **`/AgentFlow/` is case-sensitive** (`/agentflow/` is a 404), and every node `id` must be a fresh UUID you set yourself (see `api/agentflow.md`).
 - **XML attributes are camelCase, REST JSON body is snake_case** for the SAME params: `<Stream contentType="...">` (XML) vs `{"content_type":"..."}` (REST). Don't mix.
 
 ## How to optimize for speed
